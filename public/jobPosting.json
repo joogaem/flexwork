@@ -1,0 +1,560 @@
+[
+    {
+        "company_name": "회사명1",
+        "title": "공고 제목1",
+        "badge": [
+            "국내 거주 필수"
+        ],
+        "country": "대한민국",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명1 공고 제목1",
+        "like": false,
+        "occupation": "경영・비즈니스",
+        "region": "국내 거주 필수",
+        "employment_type": "정규직",
+        "career": "경력무관",
+        "working_hours_per_week": "주 20시간 미만"
+    },
+    {
+        "company_name": "회사명2",
+        "title": "공고 제목2",
+        "badge": [
+            "국내 거주 필수",
+            "부분원격근무",
+            "주 40시간(풀타임)"
+        ],
+        "country": "영국",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명2 공고 제목2",
+        "like": true,
+        "occupation": "금융",
+        "region": "지역 제한 없음",
+        "employment_type": "계약직",
+        "career": "경력무관",
+        "working_hours_per_week": "주 20시간 미만"
+    },
+    {
+        "company_name": "회사명3",
+        "title": "공고 제목3",
+        "badge": [
+            "국내 거주 필수",
+            "정규직",
+            "주 40시간(풀타임)"
+        ],
+        "country": "미국",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명3 공고 제목3",
+        "like": false,
+        "occupation": "HR",
+        "region": "국내 거주 필수",
+        "employment_type": "프리랜서",
+        "career": "경력무관",
+        "working_hours_per_week": "주 20시간 미만"
+    },
+    {
+        "company_name": "회사명4",
+        "title": "공고 제목4",
+        "badge": [
+            "부분원격근무",
+            "정규직",
+            "주 40시간(풀타임)"
+        ],
+        "country": "아일랜드",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명4 공고 제목4",
+        "like": true,
+        "occupation": "HR",
+        "region": "국내 거주 필수",
+        "employment_type": "정규직",
+        "career": "경력무관",
+        "working_hours_per_week": "주 20시간 미만"
+    },
+    {
+        "company_name": "회사명5",
+        "title": "공고 제목5",
+        "badge": [
+            "정규직",
+            "주 40시간(풀타임)"
+        ],
+        "country": "프랑스",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명5 공고 제목5",
+        "like": false,
+        "occupation": "HR",
+        "region": "국내 거주 필수",
+        "employment_type": "정규직",
+        "career": "경력무관",
+        "working_hours_per_week": "주 20시간 미만"
+    },
+    {
+        "company_name": "회사명6",
+        "title": "공고 제목6",
+        "badge": [
+            "국내 거주 필수",
+            "부분원격근무",
+            "정규직"
+        ],
+        "country": "뉴질랜드",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명6 공고 제목6",
+        "like": true,
+        "occupation": "HR",
+        "region": "국내 거주 필수",
+        "employment_type": "계약직",
+        "career": "경력무관",
+        "working_hours_per_week": "주 20시간 미만"
+    },
+    {
+        "company_name": "회사명7",
+        "title": "공고 제목7",
+        "badge": [
+            "국내 거주 필수",
+            "정규직",
+            "주 40시간(풀타임)"
+        ],
+        "country": "스위스",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명7 공고 제목7",
+        "like": false,
+        "occupation": "HR",
+        "region": "국내 거주 필수",
+        "employment_type": "정규직",
+        "career": "경력무관",
+        "working_hours_per_week": "주 20시간 미만"
+    },
+    {
+        "company_name": "회사명8",
+        "title": "공고 제목8",
+        "badge": [
+            "국내 거주 필수",
+            "부분원격근무",
+            "정규직"
+        ],
+        "country": "오스트리아",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명8 공고 제목8",
+        "like": true,
+        "occupation": "기타",
+        "region": "국내 거주 필수",
+        "employment_type": "프리랜서",
+        "career": "경력무관",
+        "working_hours_per_week": "주 20시간 미만"
+    },
+    {
+        "company_name": "회사명9",
+        "title": "공고 제목9",
+        "badge": [
+            "국내 거주 필수",
+            "유연근무",
+            "정규직",
+            "주 40시간(풀타임)"
+        ],
+        "country": "호주",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명9 공고 제목9",
+        "like": false,
+        "occupation": "HR",
+        "region": "국내 거주 필수",
+        "employment_type": "정규직",
+        "career": "경력무관",
+        "working_hours_per_week": "주 20시간 미만"
+    },
+    {
+        "company_name": "회사명10",
+        "title": "공고 제목10",
+        "badge": [
+            "국내 거주 필수",
+            "부분원격근무",
+            "정규직",
+            "주 40시간(풀타임)"
+        ],
+        "country": "일본",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명10 공고 제목10",
+        "like": true,
+        "occupation": "HR",
+        "region": "국내 거주 필수",
+        "employment_type": "계약직",
+        "career": "경력무관",
+        "working_hours_per_week": "주 20시간 미만"
+    },
+    {
+        "company_name": "회사명11",
+        "title": "공고 제목11",
+        "badge": [
+            "국내 거주 필수"
+        ],
+        "country": "대한민국",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명11 공고 제목11",
+        "like": false,
+        "occupation": "경영・비즈니스",
+        "region": "국내 거주 필수",
+        "employment_type": "정규직",
+        "career": "경력무관",
+        "working_hours_per_week": "주 20시간 미만"
+    },
+    {
+        "company_name": "회사명12",
+        "title": "공고 제목12",
+        "badge": [
+            "국내 거주 필수",
+            "부분원격근무",
+            "주 40시간(풀타임)"
+        ],
+        "country": "영국",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명12 공고 제목12",
+        "like": true,
+        "occupation": "금융",
+        "region": "지역 제한 없음",
+        "employment_type": "계약직",
+        "career": "경력무관",
+        "working_hours_per_week": "주 20시간 미만"
+    },
+    {
+        "company_name": "회사명13",
+        "title": "공고 제목13",
+        "badge": [
+            "국내 거주 필수",
+            "정규직",
+            "주 40시간(풀타임)"
+        ],
+        "country": "미국",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명13 공고 제목13",
+        "like": false,
+        "occupation": "HR",
+        "region": "국내 거주 필수",
+        "employment_type": "프리랜서",
+        "career": "경력무관",
+        "working_hours_per_week": "주 20시간 미만"
+    },
+    {
+        "company_name": "회사명14",
+        "title": "공고 제목14",
+        "badge": [
+            "지역 제한 없음",
+            "계약직"
+        ],
+        "country": "캐나다",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명14 공고 제목14",
+        "like": true,
+        "occupation": "마케팅・광고",
+        "region": "지역 제한 없음",
+        "employment_type": "계약직",
+        "career": "5년 미만",
+        "working_hours_per_week": "주 30-40시간"
+    },
+    {
+        "company_name": "회사명15",
+        "title": "공고 제목15",
+        "badge": [
+            "국내 거주 필수",
+            "정규직"
+        ],
+        "country": "대한민국",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명15 공고 제목15",
+        "like": false,
+        "occupation": "디자인",
+        "region": "국내 거주 필수",
+        "employment_type": "정규직",
+        "career": "신입",
+        "working_hours_per_week": "주 40시간 (풀타임)"
+    },
+    {
+        "company_name": "회사명16",
+        "title": "공고 제목16",
+        "badge": [
+            "부분원격근무",
+            "프리랜서"
+        ],
+        "country": "독일",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명16 공고 제목16",
+        "like": true,
+        "occupation": "테크",
+        "region": "지역 제한 없음",
+        "employment_type": "프리랜서",
+        "career": "10년 미만",
+        "working_hours_per_week": "시간 협의"
+    },
+    {
+        "company_name": "회사명17",
+        "title": "공고 제목17",
+        "badge": [
+            "국내 거주 필수",
+            "정규직",
+            "주 40시간(풀타임)"
+        ],
+        "country": "대한민국",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명17 공고 제목17",
+        "like": false,
+        "occupation": "고객서비스・리테일",
+        "region": "국내 거주 필수",
+        "employment_type": "정규직",
+        "career": "5년 이상",
+        "working_hours_per_week": "주 40시간 (풀타임)"
+    },
+    {
+        "company_name": "회사명18",
+        "title": "공고 제목18",
+        "badge": [
+            "지역 제한 없음",
+            "계약직"
+        ],
+        "country": "프랑스",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명18 공고 제목18",
+        "like": true,
+        "occupation": "영업",
+        "region": "지역 제한 없음",
+        "employment_type": "계약직",
+        "career": "경력무관",
+        "working_hours_per_week": "주 20-30시간"
+    },
+    {
+        "company_name": "회사명19",
+        "title": "공고 제목19",
+        "badge": [
+            "국내 거주 필수",
+            "정규직"
+        ],
+        "country": "대한민국",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명19 공고 제목19",
+        "like": false,
+        "occupation": "교육",
+        "region": "국내 거주 필수",
+        "employment_type": "정규직",
+        "career": "10년 이상",
+        "working_hours_per_week": "주 40시간 (풀타임)"
+    },
+    {
+        "company_name": "회사명20",
+        "title": "공고 제목20",
+        "badge": [
+            "부분원격근무",
+            "프리랜서"
+        ],
+        "country": "스페인",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명20 공고 제목20",
+        "like": true,
+        "occupation": "게임 및 미디어",
+        "region": "지역 제한 없음",
+        "employment_type": "프리랜서",
+        "career": "5년 미만",
+        "working_hours_per_week": "시간 협의"
+    },
+    {
+        "company_name": "회사명21",
+        "title": "공고 제목21",
+        "badge": [
+            "국내 거주 필수",
+            "계약직"
+        ],
+        "country": "대한민국",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명21 공고 제목21",
+        "like": false,
+        "occupation": "제조・생산",
+        "region": "국내 거주 필수",
+        "employment_type": "계약직",
+        "career": "신입",
+        "working_hours_per_week": "주 30-40시간"
+    },
+    {
+        "company_name": "회사명22",
+        "title": "공고 제목22",
+        "badge": [
+            "지역 제한 없음",
+            "정규직",
+            "주 40시간(풀타임)"
+        ],
+        "country": "이탈리아",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명22 공고 제목22",
+        "like": true,
+        "occupation": "물류・무역",
+        "region": "지역 제한 없음",
+        "employment_type": "정규직",
+        "career": "10년 미만",
+        "working_hours_per_week": "주 40시간 (풀타임)"
+    },
+    {
+        "company_name": "회사명23",
+        "title": "공고 제목23",
+        "badge": [
+            "국내 거주 필수",
+            "프리랜서"
+        ],
+        "country": "대한민국",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명23 공고 제목23",
+        "like": false,
+        "occupation": "법률",
+        "region": "국내 거주 필수",
+        "employment_type": "프리랜서",
+        "career": "5년 이상",
+        "working_hours_per_week": "시간 협의"
+    },
+    {
+        "company_name": "회사명24",
+        "title": "공고 제목24",
+        "badge": [
+            "부분원격근무",
+            "계약직"
+        ],
+        "country": "호주",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명24 공고 제목24",
+        "like": true,
+        "occupation": "식・음료",
+        "region": "지역 제한 없음",
+        "employment_type": "계약직",
+        "career": "경력무관",
+        "working_hours_per_week": "주 20-30시간"
+    },
+    {
+        "company_name": "회사명25",
+        "title": "공고 제목25",
+        "badge": [
+            "국내 거주 필수",
+            "정규직",
+            "주 40시간(풀타임)"
+        ],
+        "country": "대한민국",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명25 공고 제목25",
+        "like": false,
+        "occupation": "기타",
+        "region": "국내 거주 필수",
+        "employment_type": "정규직",
+        "career": "20년 이상",
+        "working_hours_per_week": "주 40시간 (풀타임)"
+    },
+    {
+        "company_name": "회사명26",
+        "title": "공고 제목26",
+        "badge": [
+            "지역 제한 없음",
+            "프리랜서"
+        ],
+        "country": "네덜란드",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명26 공고 제목26",
+        "like": true,
+        "occupation": "경영・비즈니스",
+        "region": "지역 제한 없음",
+        "employment_type": "프리랜서",
+        "career": "10년 이상",
+        "working_hours_per_week": "시간 협의"
+    },
+    {
+        "company_name": "회사명27",
+        "title": "공고 제목27",
+        "badge": [
+            "국내 거주 필수",
+            "계약직"
+        ],
+        "country": "대한민국",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명27 공고 제목27",
+        "like": false,
+        "occupation": "HR",
+        "region": "국내 거주 필수",
+        "employment_type": "계약직",
+        "career": "5년 미만",
+        "working_hours_per_week": "주 30-40시간"
+    },
+    {
+        "company_name": "회사명28",
+        "title": "공고 제목28",
+        "badge": [
+            "부분원격근무",
+            "정규직"
+        ],
+        "country": "스웨덴",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명28 공고 제목28",
+        "like": true,
+        "occupation": "금융",
+        "region": "지역 제한 없음",
+        "employment_type": "정규직",
+        "career": "신입",
+        "working_hours_per_week": "주 40시간 (풀타임)"
+    },
+    {
+        "company_name": "회사명29",
+        "title": "공고 제목29",
+        "badge": [
+            "국내 거주 필수",
+            "프리랜서"
+        ],
+        "country": "대한민국",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명29 공고 제목29",
+        "like": false,
+        "occupation": "마케팅・광고",
+        "region": "국내 거주 필수",
+        "employment_type": "프리랜서",
+        "career": "경력무관",
+        "working_hours_per_week": "시간 협의"
+    },
+    {
+        "company_name": "회사명30",
+        "title": "공고 제목30",
+        "badge": [
+            "지역 제한 없음",
+            "계약직",
+            "주 40시간(풀타임)"
+        ],
+        "country": "싱가포르",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명30 공고 제목30",
+        "like": true,
+        "occupation": "디자인",
+        "region": "지역 제한 없음",
+        "employment_type": "계약직",
+        "career": "10년 미만",
+        "working_hours_per_week": "주 40시간 (풀타임)"
+    },
+    {
+        "company_name": "회사명31",
+        "title": "공고 제목31",
+        "badge": [
+            "국내 거주 필수",
+            "정규직"
+        ],
+        "country": "대한민국",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명31 공고 제목31",
+        "like": false,
+        "occupation": "테크",
+        "region": "국내 거주 필수",
+        "employment_type": "정규직",
+        "career": "5년 이상",
+        "working_hours_per_week": "주 40시간 (풀타임)"
+    },
+    {
+        "company_name": "회사명32",
+        "title": "공고 제목32",
+        "badge": [
+            "부분원격근무",
+            "프리랜서"
+        ],
+        "country": "브라질",
+        "image_url": "https://picsum.photos/200",
+        "contents": "회사명32 공고 제목32",
+        "like": true,
+        "occupation": "고객서비스・리테일",
+        "region": "지역 제한 없음",
+        "employment_type": "프리랜서",
+        "career": "경력무관",
+        "working_hours_per_week": "시간 협의"
+    }
+]

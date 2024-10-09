@@ -1,0 +1,196 @@
+{
+    "search_header": [
+        {
+            "key": "occupation",
+            "value": "직군"
+        },
+        {
+            "key": "region",
+            "value": "지역"
+        },
+        {
+            "key": "employment_type",
+            "value": "고용형태"
+        },
+        {
+            "key": "career",
+            "value": "경력"
+        },
+        {
+            "key": "working_hours_per_week",
+            "value": "주당 업무시간"
+        }
+    ],
+    "search_condition": [
+        [
+            {
+                "id": 0,
+                "key": "occupation",
+                "value": "경영・비즈니스"
+            },
+            {
+                "id": 1,
+                "key": "occupation",
+                "value": "HR"
+            },
+            {
+                "id": 2,
+                "key": "occupation",
+                "value": "금융"
+            },
+            {
+                "id": 3,
+                "key": "occupation",
+                "value": "마케팅・광고"
+            },
+            {
+                "id": 4,
+                "key": "occupation",
+                "value": "디자인"
+            },
+            {
+                "id": 5,
+                "key": "occupation",
+                "value": "테크"
+            },
+            {
+                "id": 6,
+                "key": "occupation",
+                "value": "고객서비스・리테일"
+            },
+            {
+                "id": 7,
+                "key": "occupation",
+                "value": "영업"
+            },
+            {
+                "id": 8,
+                "key": "occupation",
+                "value": "교육"
+            },
+            {
+                "id": 9,
+                "key": "occupation",
+                "value": "게임 및 미디어"
+            },
+            {
+                "id": 10,
+                "key": "occupation",
+                "value": "제조・생산"
+            },
+            {
+                "id": 11,
+                "key": "occupation",
+                "value": "물류・무역"
+            },
+            {
+                "id": 12,
+                "key": "occupation",
+                "value": "법률"
+            },
+            {
+                "id": 13,
+                "key": "occupation",
+                "value": "식・음료"
+            },
+            {
+                "id": 14,
+                "key": "occupation",
+                "value": "기타"
+            }
+        ],
+        [
+            {
+                "id": 0,
+                "key": "region",
+                "value": "국내 거주 필수"
+            },
+            {
+                "id": 1,
+                "key": "region",
+                "value": "지역 제한 없음"
+            }
+        ],
+        [
+            {
+                "id": 0,
+                "key": "employment_type",
+                "value": "정규직"
+            },
+            {
+                "id": 1,
+                "key": "employment_type",
+                "value": "계약직"
+            },
+            {
+                "id": 2,
+                "key": "employment_type",
+                "value": "프리랜서"
+            }
+        ],
+        [
+            {
+                "id": 0,
+                "key": "career",
+                "value": "경력무관"
+            },
+            {
+                "id": 1,
+                "key": "career",
+                "value": "신입"
+            },
+            {
+                "id": 2,
+                "key": "career",
+                "value": "5년 미만"
+            },
+            {
+                "id": 3,
+                "key": "career",
+                "value": "5년 이상"
+            },
+            {
+                "id": 4,
+                "key": "career",
+                "value": "10년 미만"
+            },
+            {
+                "id": 5,
+                "key": "career",
+                "value": "10년 이상"
+            },
+            {
+                "id": 6,
+                "key": "career",
+                "value": "20년 이상"
+            }
+        ],
+        [
+            {
+                "id": 0,
+                "key": "working_hours_per_week",
+                "value": "주 20시간 미만"
+            },
+            {
+                "id": 1,
+                "key": "working_hours_per_week",
+                "value": "주 20-30시간"
+            },
+            {
+                "id": 2,
+                "key": "working_hours_per_week",
+                "value": "주 30-40시간"
+            },
+            {
+                "id": 3,
+                "key": "working_hours_per_week",
+                "value": "주 40시간 (풀타임)"
+            },
+            {
+                "id": 4,
+                "key": "working_hours_per_week",
+                "value": "시간 협의"
+            }
+        ]
+    ]
+}

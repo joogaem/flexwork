@@ -2,134 +2,172 @@ import React, { useState } from 'react';
 import {
   AppBar,
   Toolbar,
-  Typography,
   IconButton,
   Avatar,
-  Box,
-  List,
-  ListItem,
-  ListItemButton,
+  Button,
+  Typography,
   ListItemText,
-  Collapse,
+  Box,
   Drawer,
-  useMediaQuery
+  useMediaQuery,
+  useTheme
 } from '@mui/material';
 import {
   Menu as MenuIcon,
-  Notifications as NotificationsIcon,
   ExpandLess,
   ExpandMore,
   NotificationsNone as NotificationsNoneIcon
 } from '@mui/icons-material';
+import CloseIcon from '@mui/icons-material/Close';
 import '../../resources/styles/NavBar.scss';
 
 const NavBar = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const [openCategory, setOpenCategory] = useState<number | null>(null);
-  const isMobile = useMediaQuery('(max-width:767px)');
 
-  const toggleDrawer = (open: boolean) => () => {
-    setDrawerOpen(open);
-  };
+  const [isExpanded, setIsExpanded] = useState(false);
 
-  const handleCategoryClick = (index: number) => {
-    setOpenCategory(openCategory === index ? null : index);
+  const theme = useTheme();
+  const isMobileOrTablet = useMediaQuery(theme.breakpoints.down('md'));
+
+
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
   };
 
   const menuLinks = [
-    { 
-      label: '채용공고', 
-      subLinks: ['교육', '커리어 코칭'] 
-    },
-    { 
-      label: '블로그', 
-      subLinks: ['교육', '커리어 코칭'] 
-    },
-    { 
-      label: '커리어 발전소', 
-      subLinks: ['교육', '커리어 코칭'] 
-    },
-    { 
-      label: '커뮤니티', 
-      subLinks: ['포럼', 'Q&A'] 
-    },
-    { 
-      label: '자료실', 
-      subLinks: ['도서', '튜토리얼'] 
-    }
+    '채용공고',
+    '블로그',
+    '커리어 발전소',
+    '커뮤니티',
+    '자료실'
   ];
 
-  return (
-    <AppBar position="static" className='navbar' style={{ backgroundColor: 'rgb(34, 34, 34)' }}>
-      <Toolbar className="toolbar">
-      <Box display="flex" alignItems="center" >
-        <Box marginRight="20px">
-          <img src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F7f28b2c00c330876f285822b6323e55d.cdn.bubble.io%2Ff1686685319389x618461784580355300%2Fimage%25201840%2520%25281%2529.png?w=192&h=46&auto=compress&fit=crop&dpr=1" alt="Flexwork Logo" className="logo" />
+  const renderMobileTabletView = () => (
+    <div className="navbar-mobile-container">
+      <Box className="navbar-mobile-content">
+        <Box className="navbar-logo-container">
+          <img
+            src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F7f28b2c00c330876f285822b6323e55d.cdn.bubble.io%2Ff1686685319389x618461784580355300%2Fimage%25201840%2520%25281%2529.png?w=192&h=46&auto=compress&fit=crop&dpr=1"
+            alt="Flexwork Logo"
+            className="navbar-logo"
+          />
         </Box>
+        <Box className="navbar-mobile-actions">
+          <IconButton className="navbar-icon-button">
+            <NotificationsNoneIcon className="navbar-notification-icon" />
+          </IconButton>
+          <IconButton onClick={toggleExpand} className="navbar-icon-button">
+            {isExpanded ? (
+              <CloseIcon className="navbar-close-icon" />
+            ) : (
+              <MenuIcon className="navbar-menu-icon" />
+            )}
+          </IconButton>
+        </Box>
+      </Box>
+    </div>
+  );
 
-        {isMobile ? (
-          <Box display="flex" alignItems="center">
-            <IconButton>
-              <NotificationsNoneIcon className="notificationIcon" />
-            </IconButton>
-            <IconButton onClick={toggleDrawer(true)}>
-              <MenuIcon className="menuIcon" />
-            </IconButton>
-          </Box>
-        ) : (
-          <Box className="navbarLinks">
-            {menuLinks.map((link, index) => (
-              <div key={index}>
-                <a href="#" className="navbarLink">{link.label}</a>
-              </div>
-            ))}
-          </Box>
-        )}
-        </Box>
-        {/* 오른쪽 사용자 정보 */}
-        {!isMobile && (
-          <Box display="flex" alignItems="center">
-            <div className="welcomeText">
-              윤영주님, 환영합니다!
+  const renderDesktopView = () => (
+    <>
+      <Box className="navbarLinks">
+        <Box className="navbar-logo-container">
+              <img src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F7f28b2c00c330876f285822b6323e55d.cdn.bubble.io%2Ff1686685319389x618461784580355300%2Fimage%25201840%2520%25281%2529.png?w=192&h=46&auto=compress&fit=crop&dpr=1" alt="Flexwork Logo" className="navbar-logo" />
+            </Box>
+          {menuLinks.map((link, index) => (
+            <div key={index}>
+              <a href="#" className="navbarLink">{link}</a>
             </div>
-            <IconButton color="inherit">
-              <NotificationsNoneIcon className="notificationIcon" />
-            </IconButton>
-            <IconButton>
-              <Avatar src="https://example.com/user-profile.jpg" alt="User Profile" className="avatar" />
-            </IconButton>
-          </Box>
-        )}
+          ))}
+        </Box>
+        <Box display="flex" alignItems="center">
+          <div className="welcomeText">
+            윤영주님, 환영합니다!
+          </div>
+          <IconButton color="inherit">
+            <NotificationsNoneIcon className="notificationIcon" style={{ color: 'white' }} />
+          </IconButton>
+          <IconButton>
+            <Avatar src="https://example.com/user-profile.jpg" alt="User Profile" className="avatar" style={{ color: 'white' }} />
+          </IconButton>
+        </Box>
+    </>
+  );
 
-        {/* Drawer (모바일용 햄버거 메뉴, 2뎁스 구조) */}
-        <Drawer
-          anchor="right"
-          open={drawerOpen}
-          onClose={toggleDrawer(false)}
-          PaperProps={{ style: { width: '100%', maxWidth: '320px' } }} // 화면 꽉차게 설정
-        >
-          <List>
-            {menuLinks.map((menu, index) => (
-              <React.Fragment key={index}>
-                <ListItemButton onClick={() => handleCategoryClick(index)}>
-                  <ListItemText primary={menu.label} />
-                  {openCategory === index ? <ExpandLess /> : <ExpandMore />}
-                </ListItemButton>
-                <Collapse in={openCategory === index} timeout="auto" unmountOnExit>
-                  <List component="div" disablePadding>
-                    {menu.subLinks.map((subLink, subIndex) => (
-                      <ListItemButton key={subIndex} sx={{ pl: 4 }}>
-                        <ListItemText primary={subLink} />
-                      </ListItemButton>
-                    ))}
-                  </List>
-                </Collapse>
-              </React.Fragment>
-            ))}
-          </List>
-        </Drawer>
-      </Toolbar>
-    </AppBar>
+  return (
+    <>
+      <AppBar position="static" className="navbar">
+        <Toolbar className="navbar-toolbar">
+          <Box className="navbar-container">
+            {isMobileOrTablet ? renderMobileTabletView() : renderDesktopView()}
+          </Box>
+        </Toolbar>
+      </AppBar>
+      {isExpanded && (
+        <>
+          <AppBar className="navbar" position="static">
+            <Toolbar className="navbar-toolbar" style={{ justifyContent: 'flex-end', maxWidth: '600px', margin: '0 auto', width: '100%', padding: '0 30px', borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}>
+              <Box style={{ display: 'flex', alignItems: 'center' }}>
+                <Typography variant="caption" color="inherit" style={{ marginRight: '8px' }}>
+                  윤영주님, 환영합니다!
+                </Typography>
+                <Button
+                  variant="contained"
+                  size="small"
+                  style={{
+                    backgroundColor: '#32C3A3',
+                    color: 'black',
+                    borderRadius: '50px',
+                    padding: '4px 8px',
+                    fontSize: '12px',
+                  }}
+                >
+                  로그아웃
+                </Button>
+                <Avatar
+                  alt="윤영주 사진"
+                  src="https://picsum.photos/200"
+                  style={{ marginLeft: '10px', width: '50px', height: '50px' }}
+                />
+              </Box>
+            </Toolbar>
+          </AppBar>
+                
+          {/* 네비게이션 메뉴 */}
+          <Box style={{ backgroundColor: 'rgb(34, 34, 34)', padding: '20px' }}>
+            <Box className="navbar-toolbar" style={{ maxWidth: '600px', margin: '0 auto', width: '100%', padding: '0 30px' }}>
+              <Box
+                style={{
+                  maxWidth: '600px',
+                  margin: '0 auto',
+                  width: '100%',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  color: '#FFFFFF',
+                  fontSize: '18px',
+                  fontWeight: 'bold'
+                }}
+              >
+                {menuLinks.map((link, index) => (
+                  <Typography 
+                    key={index} 
+                    component="a" 
+                    href="#" 
+                    style={{ 
+                      textDecoration: 'none', 
+                      color: 'inherit', 
+                      fontWeight: 'bold',
+                      marginRight: index !== menuLinks.length - 1 ? '20px' : '0'
+                    }}
+                  >
+                    {link}
+                  </Typography>
+                ))}
+              </Box>
+            </Box>
+          </Box>
+        </>
+      )}
+    </>
   );
 };
 

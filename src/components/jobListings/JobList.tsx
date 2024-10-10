@@ -123,7 +123,7 @@ function JobPostingList({ selectedFilters, searchTerm }: { selectedFilters: Reco
                                     <Typography variant="body2" color="text.secondary">
                                         {job.company_name}
                                     </Typography>
-                                    <Typography gutterBottom variant="h6" component="div">
+                                    <Typography gutterBottom variant="h6" component="div" fontWeight="bold">
                                         {job.title}
                                     </Typography>
                                     <Box sx={{ mt: 1, mb: 2, display: 'flex', flexWrap: 'wrap', gap: 1 }}>

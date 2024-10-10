@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import FilterSection from '../components/layout/FilterSection';
-import JobList from '../components/feature/JobList';
-import SearchBar from '../components/feature/SearchBar';
+import FilterSection from '../components/jobListings/FilterSection';
+import JobList from '../components/jobListings/JobList';
+import SearchBar from '../components/jobListings/SearchBar';
 import '../resources/styles/JobListings.scss';
 
 

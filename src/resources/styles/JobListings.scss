@@ -87,6 +87,50 @@
     }
 }
 
+.filter-section {
+    .btn-show-filters.responsive-only {
+      display: none;
+    }
+  
+    .filter-content {
+      display: block;
+    }
+  
+    @media (max-width: 1024px) {
+      .btn-show-filters.responsive-only {
+        display: flex;
+        color: #00c853;
+        &:hover {
+          background-color: #00c85333;
+        }
+      }
+  
+      .filter-content {
+        display: none;
+        &.show {
+          display: block;
+        }
+      }
+    }
+}
+
+.radio-btn-filters {
+    &.Mui-checked {
+      color: #00c853;
+    }
+  }
+
+  .btn-load-more {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    
+    .MuiSvgIcon-root {
+        margin-left: 8px;
+    }
+}
+
 /* 태블릿을 위한 미디어 쿼리 */
 @media (max-width: 1024px) and (min-width: 768px) {
     .job-listings {
@@ -99,15 +143,30 @@
         .listings-container {
             width: 100%;
             height: auto;
+            overflow-y: auto;
         }
     }
+
+    .btn-show-filters.mobile-only {
+        display: flex;
+        color: #00c853;
+        &:hover {
+          background-color: #00c85333;
+        }
+      }
+  
+      .filter-content {
+        display: none;
+        &.show {
+          display: block;
+        }
+      }
 }
 
 /* 모바일을 위한 미디어 쿼리 */
 @media (max-width: 767px) {
     .job-listings {
         flex-direction: column;
-
 
         .filter-container {
             width: 100%;
@@ -116,21 +175,22 @@
         .listings-container {
             width: 100%;
             height: auto;
+            overflow-y: auto;
         }
     }
-}
 
-.btn-load-more {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: color 0.3s ease;
-
-    &:hover {
-        color: #primary-color; // 프로젝트의 주 색상으로 변경하세요
-    }
-
-    .MuiSvgIcon-root {
-        margin-left: 8px;
-    }
+    .btn-show-filters.mobile-only {
+        display: flex;
+        color: #00c853;
+        &:hover {
+          background-color: #00c85333;
+        }
+      }
+  
+      .filter-content {
+        display: none;
+        &.show {
+          display: block;
+        }
+      }
 }

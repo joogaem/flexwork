@@ -1,9 +1,14 @@
-.main-container {
+body {
     background-color: rgba(237, 237, 237, 1);
+}
+
+.main-container {
+    height: 100vh;
 }
 
 .content-container {
     display: flex;
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
+    height: calc(100% - 80px); // 80px: NavBar
 }

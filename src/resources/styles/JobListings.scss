@@ -3,15 +3,18 @@
     height: calc(100% - 60px); // 30px: padding-top + 30px: padding-bottom
     padding: 30px 0;
     display: flex;
+    transition: flex-direction 0.3s ease;
 
     .filter-container {
         width: 30%;
+        transition: width 0.3s ease;
     }
 
     .listings-container {
         width: 70%;
         height: 100%;
         overflow-y: auto;
+        transition: width 0.3s ease;
     }
 }
 
@@ -33,14 +36,14 @@
         &:hover {
             font-weight: bold;
         }
-    }
 
-    .accordion-filter-category:last-of-type {
-        border-bottom: none;
-    }
+        &:last-of-type {
+            border-bottom: none;
+        }
 
-    .accordion-filter-category.Mui-expanded {
-        margin: 0;
+        &.Mui-expanded {
+            margin: 0;
+        }
     }
 
     .radio-btn-filters {
@@ -71,9 +74,31 @@
     .btn-show-filters {
         margin-bottom: 16px;
         font-weight: bold;
+        color: #00c853;
 
         &:hover {
             background-color: rgba(0, 200, 83, 0.1);
+        }
+
+        &.responsive-only {
+            display: none;
+        }
+    }
+
+    .filter-content {
+        display: block;
+    }
+
+    @media (max-width: 1024px) {
+        .btn-show-filters.responsive-only {
+            display: flex;
+        }
+
+        .filter-content {
+            display: none;
+            &.show {
+                display: block;
+            }
         }
     }
 }
@@ -83,44 +108,11 @@
     border-radius: 2px;
 
     &:hover {
-        background-color: #f0f4f8; // 밝은 청회색
+        background-color: #f0f4f8;
     }
 }
 
-.filter-section {
-    .btn-show-filters.responsive-only {
-      display: none;
-    }
-  
-    .filter-content {
-      display: block;
-    }
-  
-    @media (max-width: 1024px) {
-      .btn-show-filters.responsive-only {
-        display: flex;
-        color: #00c853;
-        &:hover {
-          background-color: #00c85333;
-        }
-      }
-  
-      .filter-content {
-        display: none;
-        &.show {
-          display: block;
-        }
-      }
-    }
-}
-
-.radio-btn-filters {
-    &.Mui-checked {
-      color: #00c853;
-    }
-  }
-
-  .btn-load-more {
+.btn-load-more {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -131,66 +123,43 @@
     }
 }
 
-/* 태블릿을 위한 미디어 쿼리 */
-@media (max-width: 1024px) and (min-width: 768px) {
+@media (max-width: 1024px) {
     .job-listings {
         flex-direction: column;
 
-        .filter-container {
+        .filter-container,
+        .listings-container {
             width: 100%;
         }
 
         .listings-container {
-            width: 100%;
             height: auto;
-            overflow-y: auto;
+            overflow-y: unset;
+            padding-bottom: 30px;
         }
     }
+    .btn-show-filters.responsive-only {
+      display: flex;
+  }
 
+  .filter-content {
+      display: none;
+      &.show {
+          display: block;
+      }
+  }
     .btn-show-filters.mobile-only {
         display: flex;
         color: #00c853;
         &:hover {
-          background-color: #00c85333;
-        }
-      }
-  
-      .filter-content {
-        display: none;
-        &.show {
-          display: block;
-        }
-      }
-}
-
-/* 모바일을 위한 미디어 쿼리 */
-@media (max-width: 767px) {
-    .job-listings {
-        flex-direction: column;
-
-        .filter-container {
-            width: 100%;
-        }
-
-        .listings-container {
-            width: 100%;
-            height: auto;
-            overflow-y: auto;
+            background-color: #00c85333;
         }
     }
 
-    .btn-show-filters.mobile-only {
-        display: flex;
-        color: #00c853;
-        &:hover {
-          background-color: #00c85333;
-        }
-      }
-  
-      .filter-content {
+    .filter-content {
         display: none;
         &.show {
-          display: block;
+            display: block;
         }
-      }
+    }
 }

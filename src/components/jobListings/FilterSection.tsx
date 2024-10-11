@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  Typography, Button, Box, Accordion, AccordionSummary, AccordionDetails,
-  FormGroup, FormControlLabel, Radio, RadioGroup,
+  Typography, Button, Box, Accordion, AccordionSummary, AccordionDetails, FormControlLabel, Radio, RadioGroup,
 } from '@mui/material';
 import { ExpandMore, RestartAlt, FilterList } from '@mui/icons-material';
 
@@ -21,6 +20,7 @@ function FilterSection({ selectedFilters, setSelectedFilters }:
 
   const [filterData, setFilterData] = useState<FilterData | null>(null);
   const [showFilters, setShowFilters] = useState(false);
+  const [expandedAccordions, setExpandedAccordions] = useState<string[]>([]);
 
   useEffect(() => {
     fetch('/filterCategories.json')
@@ -29,7 +29,6 @@ function FilterSection({ selectedFilters, setSelectedFilters }:
       .catch(error => console.error('Error loading filter categories:', error));
   }, []);
 
-  // Radio 버튼 상태 변경 처리 함수
   const handleRadioChange = (category: string, value: string) => {
     setSelectedFilters(prevFilters => ({
       ...prevFilters,
@@ -67,9 +66,17 @@ function FilterSection({ selectedFilters, setSelectedFilters }:
     </RadioGroup>
   );
 
-  // 모든 필터 초기화 함수
+  // 모든 필터 초기화 함수 수정
   const resetAllFilters = () => {
     setSelectedFilters({});
+    setExpandedAccordions([]);
+  };
+
+  // 아코디언 확장/축소 처리 함수
+  const handleAccordionChange = (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+    setExpandedAccordions(prev =>
+      isExpanded ? [...prev, panel] : prev.filter(item => item !== panel)
+    );
   };
 
   // 모든 필터 보기/숨기기 토글 함수
@@ -89,7 +96,12 @@ function FilterSection({ selectedFilters, setSelectedFilters }:
       </Button>
       <div className={`filter-content ${showFilters ? 'show' : ''}`}>
         {filterData && filterData.search_header.map((category, index) => (
-          <Accordion key={category.key} className='accordion-filter-category'>
+          <Accordion 
+            key={category.key} 
+            className='accordion-filter-category'
+            expanded={expandedAccordions.includes(category.key)}
+            onChange={handleAccordionChange(category.key)}
+          >
             <AccordionSummary
               expandIcon={<ExpandMore className='icon-expand' />}
               aria-controls={`panel${index}-content`}

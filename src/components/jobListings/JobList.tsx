@@ -63,12 +63,19 @@ function JobPostingList({ selectedFilters, searchTerm }: { selectedFilters: Reco
             });
 
             const searchMatch = searchTerm === '' ||
-                job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                job.company_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                job.contents.toLowerCase().includes(searchTerm.toLowerCase());
+                Object.values(job).some(value => 
+                    typeof value === 'string' && 
+                    value.toLowerCase().includes(searchTerm.toLowerCase())
+                ) ||
+                (Array.isArray(job.badge) && 
+                    job.badge.some(badge => 
+                        badge.toLowerCase().includes(searchTerm.toLowerCase())
+                    )
+                );
 
             return filterMatch && searchMatch;
         });
+        
         document.querySelector('.listings-container')?.scrollTo(0, 0);
         setFilteredJobs(filtered);
         setPage(1);

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import NavBar from '../components/_common/NavBar';
 import JobListings from '../containers/JobListings';
 // import Footer from '../components/_common/Footer'; 

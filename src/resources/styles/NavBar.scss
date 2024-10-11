@@ -89,3 +89,71 @@
     color: white;
   }
 }
+
+.navbar-expanded {
+  &-toolbar {
+    justify-content: flex-end;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  &-user-info {
+    display: flex;
+    align-items: center;
+  }
+
+  &-menu {
+    background-color: rgb(34, 34, 34);
+    padding: 20px;
+
+    &-container {
+      max-width: 600px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 0 30px;
+    }
+
+    &-links {
+      max-width: 600px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      color: #FFFFFF;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: inherit;
+      font-weight: bold;
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.navbar-welcome-text {
+  margin-right: 8px;
+}
+
+.navbar-logout-button {
+  background-color: #32C3A3;
+  color: black;
+  border-radius: 50px;
+  padding: 2px 6px;
+  font-size: 11px;
+}
+
+.navbar-user-avatar {
+  margin-left: 40px;
+  width: 50px;
+  height: 50px;
+}
